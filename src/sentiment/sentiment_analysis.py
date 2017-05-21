@@ -83,13 +83,13 @@ def page_parse(string):
     # convert uppercase to lowercase
     temp_string = temp_string.lower()    
     # replace selected character strings/stop-words with space
-    for i in range(len(stoplist)):
-        stopstring = ' ' + str(stoplist[i][0]) + ' '
+    for j in range(len(stoplist)):
+        stopstring = ' ' + str(stoplist[j][0]) + ' '
         temp_string = re.sub(stopstring, ' ', temp_string)        
     # replace selected character strings/codebooks with alternate words
-    for i in range(len(codebook)):
-        cb_orig_string = ' ' +str(codebook[i][0])+ ' '
-        cb_repl_string = ' ' +str(codebook[i][1])+ ' '
+    for k in range(len(codebook)):
+        cb_orig_string = ' ' +str(codebook[k][0])+ ' '
+        cb_repl_string = ' ' +str(codebook[k][1])+ ' '
         temp_string = re.sub(cb_orig_string, cb_repl_string, temp_string)        
     # replace multiple blank characters with one blank character
     temp_string = re.sub('\s+', ' ', temp_string)    
@@ -304,8 +304,8 @@ def load_twitter_data():
 ################################################
 def load_facebook_data():
 
-    fb_amzn_df = pd.read_csv(twtr_data_path+'amazonecho_tweet_date_text_file.txt', delimiter = '\t',index_col=None, header=None, parse_dates=True)
-    fb_amzn_df.columns=['content', 'date']
+    fb_amzn_df = pd.read_csv(fb_data_path+'Amazon Echo_facebook_comments.csv', delimiter = ',',index_col=None, header=1, parse_dates=True)
+    fb_amzn_df.columns=['date', 'content']
     fb_amzn_df['date'] = pd.to_datetime(fb_amzn_df['date'])    
     fb_amzn_df = fb_amzn_df.dropna()
     fb_amzn_df['date'] = fb_amzn_df['date'].dt.strftime('%Y-%m-%d')    
@@ -313,8 +313,8 @@ def load_facebook_data():
     fb_amzn_df['source'] = "Facebook"
     fb_amzn_df['dataset'] = "Amazon"
 
-    fb_goog_df = pd.read_csv(twtr_data_path+'amazonecho_tweet_date_text_file.txt', delimiter = '\t',index_col=None, header=None, parse_dates=True)
-    fb_goog_df.columns=['content', 'date']
+    fb_goog_df = pd.read_csv(fb_data_path+'Google Home_facebook_comments.csv', delimiter = ',',index_col=None, header=1, parse_dates=True)
+    fb_goog_df.columns=['date', 'content']
     fb_goog_df['date'] = pd.to_datetime(fb_goog_df['date'])    
     fb_goog_df = fb_goog_df.dropna()
     fb_goog_df['date'] = fb_goog_df['date'].dt.strftime('%Y-%m-%d')    
@@ -415,6 +415,7 @@ print(twtr_goog_dfx)
 # Step 4: Load data from Facebook
 fb_amzn_dfx, fb_goog_dfx = load_facebook_data()      
 print(fb_goog_dfx)
+print(fb_amzn_dfx)
 
 # Step 5: Assign Quarters to CNET, Twitter & Facebook Data
 # CNET
@@ -447,17 +448,18 @@ google_dfx = pd.concat([cnet_goog_dfx,twtr_goog_dfx, fb_goog_dfx])
 print(amazon_dfx)
 print(google_dfx)
 
-# Step 7: Combine 
-# combine content based on quarters
+# Step 7: Combine comments based on quarter end dates
+# Amazon
 amazon_df = amazon_dfx.groupby(['end_date'])['content'].apply(lambda x: 'xxxxxxxx ' .join(x)).reset_index()
 #res1 = amazon_dfx.groupby(['quarter', 'source', 'dataset'])['content'].apply(lambda x: 'XXXXXX'.join(x)).reset_index()
 print(amazon_df)
 
+# Google
 google_df = google_dfx.groupby(['end_date'])['content'].apply(lambda x: 'xxxxxxxx ' .join(x)).reset_index()
 #res1 = amazon_dfx.groupby(['quarter', 'source', 'dataset'])['content'].apply(lambda x: 'XXXXXX'.join(x)).reset_index()
 print(google_df)
 
-# Step 8:
+# Step 8: 
 # Amazon Dataframe 
 amazon_df['content1'] = ' '
 amazon_df['search_term_score']=0.000
@@ -557,14 +559,12 @@ plt.savefig(sentiment_out_path+ 'amzon_google_sentiment.pdf')
 plt.close()
 
 
-
-
-################################################################################
-# define counts of positive, negative, and total words in text document 
-def count_words(text, word):    
-    positive = [w for w in text.split() if w in word]
-    return(len(positive))
-
+#################################################################################
+## define counts of positive, negative, and total words in text document 
+#def count_words(text, word):    
+#    positive = [w for w in text.split() if w in word]
+#    return(len(positive))
+#
 
 
 
