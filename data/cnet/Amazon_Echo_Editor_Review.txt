@@ -1,0 +1,42 @@
+September 28, 2016
+Amazon's voice-activated smart home speaker is undeniably futuristic, but it's also practical and accessible. With a rapidly growing slate of features and integrations, it's easy to get excited about the Echo's potential.
+The Echo's sound quality is uneven at times, with weak bass at high volumes. The growing list of "Skills" in the Alexa app could also benefit from better organization.
+More than a year after its debut, the Echo is smarter than ever, and one of the best connected home products money can currently buy.
+Since introducing the original Amazon Echo in November 2014, Amazon has continued to refresh and expand its lineup of hands-free, voice-enabled speakers.  In April, the company introduced the 
+, a smaller version of the 
+, and in September returned with an updated version of the Dot, simultaneously cutting its price almost in half to $50 (or £50). 
+This 
+, available in black or white, has a slightly sleeker design than the original, though it comes equipped with the same array of seven microphones and advanced noise-cancelling technology. Amazon says that the new Dot features a more powerful speech processor, which delivers improved far-field speech recognition accuracy. It's currently available for preorder and scheduled to ship in October. (Read the 
+.)
+The original, more expensive Echo can fill a room with sound. The Dot features much of the same functionality as the Echo, just with a less powerful speaker and a line-out plug on the back. In April, also Amazon introduced the $130 
+. Because it runs on a battery, you need to hit a button to initiate interactions; it's less convenient than the always-listening Echo and Dot, but it's also portable. And once you do push the button, you can issue voice commands to Alexa, play music from your phone or stream it over Wi-Fi, check the weather or news, and issue commands to control your smart home.
+In August, Sonos 
+ that it will add support for Amazon's Alexa voice control (and Spotify Connect) in 2017. Sonos did not mention new hardware; rather, the initial integration (a free software upgrade) will require Sonos wireless speakers and an Alexa-compatible Amazon device, such as the 
+ or 
+. The company has scheduled a private beta to begin later this year, with a public release slated for early 2017.
+Potential buyers should also note that Google's big entry into the "smart speaker" space, 
+, is expected to be revealed at the company's event on 
+.
+I didn't know I wanted to talk to my house until I talked to my house. Now, after living with the Amazon Echo for a year, I talk to it every day.
+ 	 	 	I ask it for the morning headlines as I brew my 8 a.m. pot of coffee. I ask it to play the most recent episode of my favorite podcast while I work out. I ask it to set a timer when I throw a frozen pizza in the oven for dinner. I ask it to turn my lights out when I'm hitting the sack. It's always listening, and it always just works.
+ 	 	 	That's the true success of Amazon's likable smart speaker -- it fits in seamlessly with your daily routine. It doesn't ask you to change any of your habits, it just makes a surprising number of those habits better. It's the most futuristic product that I own, yet it's also right at place in my present.
+ 	 	 	After initially debuting as an invite-only beta-gadget for $99 (I was one of the lucky ones who bought in at that price), the Amazon Echo now retails for nearly twice that: $180. The Echo isn't yet available in Australia, but that price converts roughly to about AU$255. In the UK, the Echo will cost £150 when it goes on sale in autumn 2016. For most, I still think it's worth the cost. The Echo is more than a souped-up speaker with Siri-like smarts -- it's the connected home experience you didn't know you wanted.
+ 	 	 	Take the Amazon Echo out of the box and plug it in, and you'll hear the sound of Alexa waking up. She'll say hello, then talk you through the setup process. You'll connect to the speaker's Wi-Fi network on your phone or tablet, then sync things back up with your home network in the Alexa app. Within a minute, you'll be up and running.
+ 	 	 	The speaker will light up whenever it hears you say its wake word, "Alexa" (or "Amazon," or "Echo," in case you don't want to anthropomorphize the thing. Or in case your name happens to be Alexa). From there, you'll tell the Echo what you want. Whether that's some light jazz, the latest headlines from NPR, a 20-minute kitchen timer, an especially dumb joke or any one of the countless other things you might think to ask for is entirely up to you.
+The Echo is a good listener. Hidden within are seven noise-cancelling microphones that use "far-field" voice recognition technology. All that really means is that it's good at hearing you even when you aren't next to it, and even when there's other chatter going on. In my home, the Echo can understand me just fine from several feet away, even when I've got the TV on.
+ 	 	 	More and more each month, it seems. Most recently, the Echo unveiled new tricks that let you 
+, 
+, or 
+ -- provided you're a paid, premium subscriber of the service.
+ 	  In CNET's original Amazon Echo review, 
+ rightly pointed to Spotify as a notable omission from the list of music streaming services from which Alexa can pull. At the time, it would play tracks from the Amazon Prime Music library (about 1 million songs), but if you wanted to stream from Spotify's library of more than 30 million songs, you needed to control things on your phone or tablet, then use the Echo as a plain old 
+.
+   The new integration finally adds in the voice-powered Alexa smarts for Spotify's premium subscriber base -- you'll just need to be sure to end your request for a song, album or artist with "on Spotify," as in, "Alexa, play Adele on Spotify." It's a good get for Amazon, and the biggest feather in its music-streaming cap yet, joining Pandora, iHeartRadio and TuneIn as services you can ask Alexa to stream from.
+   As for audio quality, the Echo features dual downward-firing speakers that promise 360 degrees of "immersive sound." Some of us at CNET, myself included, have noted that its bass tends to weaken or distort at maximum volume, but I haven't had a problem with that personally, since I rarely find myself needing to dial things up much higher than 60 percent or so. To my ear, the Echo does a fine job of filling a room with sound, especially with crisp speech playback, something you'll notice when you listen to a podcast or stream an audiobook.
+   Still, if it's audio quality you're concerned with, you can find 
+ at this price. The option to sync the Echo up with an external sound system and use it more strictly as a point of control would be a good fix, and a nice touch for the audiophiles out there. Unfortunately, you can't do that -- at least not yet. Amazon seems pretty committed to the idea of the Echo as an all-in-one device.
+   All of that said, the Echo is more than a music streamer, just as an iPhone is more than a phone. The key is Alexa. She's helpful, she's capable and she's mostly good at understanding what I'm asking of her, enough so to put her right on par with Apple's Siri as far as virtual assistants go.
+   But unlike Siri, which is still secondary to touch as a means of interfacing with iOS devices, Alexa is essentially all the Echo has. It was critical for Amazon to get her right -- thankfully, she delivers (and yes, calling Alexa "she" feels more correct than calling Alexa "it," a testament to how personable she is).
+At the Echo's launch, Alexa's native capabilities included reading off weather forecasts, setting timers and alarms, and managing your to-do list and shopping list (and, of course, crossing items off of that shopping list by making purchases on Amazon whenever you ask her to). One trick that I use almost every day is to ask her for the news. In response, she'll offer a curated list of the day's headlines and news blurbs from popular sources such as NPR, CNN, BBC News and Fox Sports Radio. You pick which sources you want to hear from and which categories you want to hear about in the Alexa app.
+Since launching, the Echo has only gotten smarter. Most of what's new comes by way of Alexa's "Skills," which are essentially the Echo's apps. There are over a hundred of them at this point, and whenever you enable one, you're basically teaching Alexa a new trick. And, thanks to Amazon 
+ that third parties can use to craft those Skills, the list of options is growing rapidly.

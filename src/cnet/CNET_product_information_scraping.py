@@ -14,49 +14,50 @@ import os
 import json
 
 
-""" NOTE: Set the directory to the actual folder of this file or Change to Editor Directory in Canopy 
-"""
 
-def get_File_Path():
+def get_BaseProject_Path():
+    ### NOTE: Set the directory to the actual folder of this file or Change to Editor Directory in Canopy 
+
     fp = os.getcwd()
-    return(fp)
+    fp1=os.path.dirname(fp)
+    fp2=os.path.dirname(fp1)
+    return(fp2)
     
-def get_OutputFile_Path(current_dir,out_folder):    
-    #os.chdir(os.path.dirname(current_dir))
-    fp=os.path.dirname(current_dir)
-    #os.chdir(fp+"\\"+out_folder)
-    fp=fp+"\\"+out_folder #os.getcwd()
-    print(fp)
-    return(fp)
 
-out_folder = "3. Outputs"
-current_dir = get_File_Path()
-save_to_path = get_OutputFile_Path(current_dir,out_folder)
+base_dir = get_BaseProject_Path()
+print(base_dir)
+cnet_data_path = base_dir + "\\data\\cnet\\"
 
+#webdriver_path = "C:\\Chrome\\chromedriver_win32\chromedriver.exe"    
+webdriver_path = base_dir + "\\src\\webdriver\\chromedriver_win32\\chromedriver.exe"    
+print(webdriver_path)
 
 def get_html_stream(url):
     """ gets html stream for given URL
     """
-    driver = webdriver.Chrome(executable_path="C:\\Chrome\\chromedriver_win32\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path=webdriver_path)
     driver.get(url)
     time.sleep(15)
     #WebDriverWait(driver, 50).until(EC.visibility_of_element_located((By.ID, "the-element-id"))) # waits till the element with the specific id appears
-    soup = BeautifulSoup(driver.page_source)
+    soup =  html.fromstring(driver.page_source)
     driver.quit()
     return (soup)
 
 def get_CNET_User_Reviews(url, fname):
     soup = get_html_stream(url )
 
-    g_data  = soup.findAll(True, {"class":["fyre-comment-date", "fyre-review-title", "fyre-comment-username",  "fyre-review-subpart","fyre-comment", "fyre-reviews-rated", "fyre-reviews-helpful" ]})  #"fyre-review-subpart",
+    web_page_content = soup.xpath('//time[@class="fyre-comment-date"]/text() | //div[@class="fyre-comment"]/p/text()') 
+    print(web_page_content)
+    print(len(web_page_content))
+    print(type(web_page_content))
 
-    thefile = open(save_to_path+"\\"+ fname, "w")
+    thefile = open(cnet_data_path+"\\"+ fname, "w") #encoding="latin-1")
 
-    for item in g_data:
-        thefile.write("%s\n" % item)
+    for item in web_page_content:
+        thefile.write("%s\n" % item.encode('utf-8'))
     thefile.close()
 
-    return(g_data)
+    return(web_page_content)
 
 # Amazon Echo - CNET review
 strm = get_CNET_User_Reviews('https://www.cnet.com/products/amazon-echo/user-reviews/', 'Amazon_Echo_User_Reviews.txt')
@@ -69,20 +70,27 @@ print(strm)
 
 def get_CNET_Product_Review(url, fname):
     soup = get_html_stream(url )
+    
+    #g_data  = soup.findAll(True, {"class":["stars-rating", "theGood", "theBad", "theBottomLine", "description"]})
+#    web_page_content = soup.xpath('//time[@class="dtreviewed"]/text() | //time[@class="seodtreviewed"]/text() | //p[@class="theBad"]/span/text() | //p[@class="theGood"]/span/text() |  //p[@class="theBottomLine"]/span/text() | //div[@id="editorReview"]/p/text()') 
+    web_page_content = soup.xpath('//time[@class="seodtreviewed"]/text() | //p[@class="theBad"]/span/text() | //p[@class="theGood"]/span/text() |  //p[@class="theBottomLine"]/span/text() | //div[@id="editorReview"]/p/text()') 
+    web_page_content[0] = web_page_content[0].strip()
+    print(web_page_content)
+    print(len(web_page_content))
+    print(type(web_page_content))
 
-    g_data  = soup.findAll(True, {"class":["stars-rating", "theGood", "theBad", "theBottomLine", "description"]})
-    thefile = open(save_to_path+"\\"+ fname, "w")
+    thefile = open(cnet_data_path+"\\"+ fname, "w")
 
-    for item in g_data:
-        thefile.write("%s\n" % item)
+    for item in web_page_content:
+        thefile.write("%s\n" % item.encode('utf-8'))
     thefile.close()
 
-    return(g_data)
+    return(web_page_content)
 
 # Amazon Echo - CNET review
 strm = get_CNET_Product_Review('https://www.cnet.com/products/amazon-echo-review/', 'Amazon_Echo_Editor_Review.txt')
 print(strm)
-
+print(len(strm))
 # Google Home - CNET review
 strm = get_CNET_Product_Review('https://www.cnet.com/products/google-home/review/', 'Google_Home_Editor_Review.txt')
 print(strm)

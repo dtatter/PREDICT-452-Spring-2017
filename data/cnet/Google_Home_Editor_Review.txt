@@ -1,0 +1,38 @@
+November 11, 2016
+With Google Assistant built-in, the Google Home integrates with Google Calendar, Maps and even Chromecast, so it gives you personalized answers. Say the word, and Home can also control your smart home gadgets or send music and video to your TV and speakers.
+The Home can't personalize for multiple family members, and its integrations with other Google services don't allow a lot of give and take -- you can't create appointments in your calendar or make a to-do list. As a smart home controller, the Home only works with four platforms.
+While the Google Home shows a ton of potential, it's currently not as versatile or useful as Amazon's Echo -- though we expect it to improve in the days and months ahead.
+ 	
+ is the undisputed king of the nascent smart home market -- a tabletop speaker with a disembodied online "smart assistant" named Alexa, available at your beck and call to answer your questions, tell you a joke or control dozens of compatible networked products in your house.
+ 	But with the release of the Google Home, Google's own voice-controlled smart speaker, the Echo is finally getting some serious competition. Google, of course, already knows as much or more about you than Facebook, thanks to your web history, your Gmail metadata and tracking the GPS records on your phone. And now the tech giant is aiming to use that data to out-Alexa Amazon, making the little countertop speaker a friendly face for its search-engine-powered online brain.
+ 	Google Home pulls info from your Google account to keep you informed about your calendar appointments, and the traffic on your commute. Home even remembers your previous questions to better answer you in the future. It can also control some of your smart-home gadgets -- albeit a fraction of what Echo can -- along with your TV and speakers if you have 
+ or 
+.
+ 	For now, as a tool meant to entertain and help you, Google Home lands well past competent, but short of greatness. For $130 (about £100 or AU$170) -- significantly less than the cost of an Echo -- it admirably fulfills its duties as an entertainer, an assistant and a smart home controller. But Amazon's assistant Alexa bests Home in the latter two categories.
+ 	Simply put: Google Home is not yet ready to dethrone Alexa or the Echo ($180, £150 or about AU$235) as the best always-listening smart home speaker.
+ 	But since all of Home's smarts (like Echo's) are online, that balance of power isn't set in stone. Google's Android went from a one-time iPhone wannabe to the world's dominant mobile operating system in just a few short years, and Echo is pretty much the iPhone of the smart home world right now.
+ 	In other words: Game on, Alexa.
+The Google Home is on sale for $130 starting tomorrow, November 4. The purchase includes six free months of 
+, the site's premium ad-free service, which normally costs $10 per month. Home's price converts to around £100 and AU$170. At launch, you can only buy Home in the US, with other countries yet to be announced.
+ 	 	Getting started with the Google Home is a lot like onboarding a highly qualified human assistant. After downloading the Google Home app, I was up and running with the speaker in minutes, and initially enthralled with how much it could do. Over the course of the first day, however, my initial enthusiasm faded. As assistants go, the Home shows room for improvement.
+ 	 	Without a doubt, though, the Home's design is excellent. Yes, it bears some resemblance to a canister of Glade air freshener (or 
+, if you really want to dial in on Home's doppleganger), but I like the slick, clean look. The customizable bases snap on and off easily, letting you add a splash of color. The top responds well to touch. You can rotate your finger clockwise or counterclockwise to change the volume, tap to start or stop the music you're playing, or long press to give the Home a command without saying the wake words, "OK Google," or "Hey Google."
+  Right now, here's what you can ask the Home to do:
+  That list doesn't include what the Home can do as an entertainer or a smart home controller -- more on both in just a bit.
+  The Home app is easy to use on both iOS and Android and integrates the Home with the conversational 
+. Recently showcased in the company's 
+, the Assistant leverages Google's services to provide personalized results. However, the Google Assistant on the Home can't do everything it can do on your phone. Some of the things the Home 
+ yet do include:
+The Home also endeavors to have a personality. Alexa can be positively charming, and Google follows suit by offering Easter egg responses to statements like "I am your father." Google's responses, though, tend to either be bland or way over the top. Much like an assistant who's new on the job, Home's friendly, but it's definitely trying too hard.
+  For more, check out our full breakdown of 
+, as well as 
+, specifically.
+  As the Google Home deepens its integrations into every aspect of your life in the service of convenience, the inevitable questions torn from the pages of dystopian science fiction novels become more and more pressing. Is Google listening to me? How safe is my information? How do I weigh privacy against convenience?
+  With the smart home at the 
+, these are worthwhile questions to ask, and the Home probably won't have the answers to assuage all of your worries. That said, 
+. The Home only records what you say after you activate it with a tap, or with the wake words -- same as the Echo. You'll see it light up in response to know that it's listening -- same as the Echo. In the Home app, you can look over your search history and delete a specific query or clear the history entirely if you'd like -- same as the Echo. There's also a mute button that stops it from listening for its wake word at all -- again, same as the Echo.
+  As for what the Home hears, its far-field microphones listen well -- just be sure to speak clearly if you have a complex command. Most of the time, I talked to the Home without hassle from across the large main room in the 
+. The Home heard me from adjacent rooms as well, given clear line of sight, and it even heard me through one wall -- though I do have a booming voice.
+  For those with more of an indoor voice, or a place larger than a one-bedroom apartment, you might want multiple Homes so you always have one within shouting distance. If multiple Homes hear your command, only the closest one -- the one that hears you best -- will respond. We've now tested this feature with multiple Homes and it works reliably. If you give a command with multiple Home in hearing range, every device that catches the wake words will light up, but only the one that hears you best will respond. 
+ on its Echo devices that also works well.
+  On occasion, the Home wouldn't respond to commands I know it understands. I'd have to repeat myself and punch up my pronunciation of the consonants. Given how new the Home is, I expected to need patience on occasion. From my experience, the Home's better than the Echo was when it first launched and roughly on par with where Alexa is now. The Home performs admirably when listening for you over music or background noise, again keeping up with -- but not besting -- the Echo.
