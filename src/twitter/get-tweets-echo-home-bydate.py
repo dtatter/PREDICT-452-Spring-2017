@@ -153,5 +153,6 @@ twitter_search_loop("amazonecho",url,None)
 # These hashtags: #googlehome
 # Written in : English
 # From this date: 2016-03-06 to 2016-03-17
+#This is empty since Google Home released Nov 4th 2016
 url='https://twitter.com/search?l=en&q=%23googlehome%20since%3A2016-03-06%20until%3A2016-03-17&src=typd&lang=en'
 twitter_search_loop("googlehome",url,None)
