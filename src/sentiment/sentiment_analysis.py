@@ -3,20 +3,12 @@
 
 # prepare for Python version 3x features and functions
 from __future__ import division, print_function
-from bs4 import BeautifulSoup  # DOM html manipulation
-from selenium import webdriver
-from lxml import html  # functions for parsing HTML
-
 from future_builtins import ascii, filter, hex, map, oct, zip
 
 import nltk  # draw on the Python natural language toolkit
 from nltk.corpus import PlaintextCorpusReader
 
-# import packages for web scraping/parsing
-import requests  # functions for interacting with web pages
-import time 
 import os
-import json
 import re
 import pandas as pd
 import numpy as np
@@ -95,15 +87,6 @@ def page_parse(string):
     temp_string = re.sub('\s+', ' ', temp_string)    
     return(temp_string)    
 
-#temp_string= 'ab amazon is out best they js amazon echo  echo home google home alexa'
-#for i in range(len(codebook)):
-#    temp_string = re.sub(' '+codebook[i][0]+' ', ' '+codebook[i][1]+' ', temp_string)  
-#    print(codebook[i][0] + ": "+temp_string) 
-#ret_val = page_parse('ab amazon is out best they js amazon echo ')
-#print(ret_val)
-
-#temp_string = re.sub('amazon echo', 'amazonecho', 'ab amazon is out best they js amazon echo ')  
-#print(temp_string)       
 ################################################
 ##  Quarters Lookup data
 ################################################
@@ -130,8 +113,6 @@ def assign_calendar(qtrs_df, content_df):
 
     result = content_df.merge(qtrs_df, how='inner').sort_values(by='date').reset_index(drop=True)
     return ( result)
-
-
 
 
 ################################################
@@ -193,12 +174,6 @@ def text_to_dataframe(web_page_content):
     print(results['date'])
     print(results['content'])
     
-    
-#    print(results['date'][len(results['date'])-1])  
-#    print(results['content'][len(results['content'])-1])  
-#    print(len(dt))
-#    print(len(comments))
-    
     return(results)
 ##############
 
@@ -209,24 +184,17 @@ def load_cnet_data():
     
     text_file = open(os.path.join(cnet_data_path, 'Amazon_Echo_Editor_Review.txt'), "r")
     lines = text_file.readlines()
-#    print (text_file)
-#    print (len(lines))
+
     text_file.close()
     cnet_amzn_editor_df = text_to_dataframe(lines)           
-#    print(type(cnet_amzn_editor_df))
-#    print(cnet_amzn_editor_df)
 
     text_file = open(os.path.join(cnet_data_path, 'Amazon_Echo_User_Reviews.txt'), "r")
     lines = text_file.readlines()
-#    print (text_file)
-#    print (len(lines))
+
     text_file.close()
     cnet_amzn_user_df = text_to_dataframe(lines)           
-#    print(type(cnet_amzn_user_df))
-#    print(cnet_amzn_user_df)
 
     cnet_amzn_df = pd.concat([cnet_amzn_user_df,cnet_amzn_editor_df])
-#    print(cnet_amzn_df)
 
     cnet_amzn_df['date'] = pd.to_datetime(cnet_amzn_df['date'])
     cnet_amzn_df = cnet_amzn_df.dropna()
@@ -237,25 +205,19 @@ def load_cnet_data():
         
     text_file = open(os.path.join(cnet_data_path, 'Google_Home_Editor_Review.txt'), "r")
     lines = text_file.readlines()
-#    print (text_file)
-#    print (len(lines))
+
     text_file.close()
     cnet_goog_editor_df = text_to_dataframe(lines)           
-#    print(type(cnet_goog_editor_df))
-#    print(cnet_goog_editor_df)
+
 
     text_file = open(os.path.join(cnet_data_path, 'Google_Home_User_Reviews.txt'), "r")
     lines = text_file.readlines()
-#    print (text_file)
-#    print (len(lines))
+
     text_file.close()
     cnet_goog_user_df = text_to_dataframe(lines)           
-#    print(type(cnet_goog_user_df))
-#    print(cnet_goog_user_df)
 
-#        df = pd.append(my_df, ignore_index=True)
+
     cnet_goog_df = pd.concat([cnet_goog_user_df,cnet_goog_editor_df])
-#    print(cnet_goog_df)
 
     cnet_goog_df['date'] = pd.to_datetime(cnet_goog_df['date'])
     cnet_goog_df = cnet_goog_df.dropna()
@@ -281,8 +243,6 @@ def load_twitter_data():
     twtr_amzn_df['source'] = "Twitter"
     twtr_amzn_df['dataset'] = "Amazon"
     
-#    print(twtr_amzn_df)
-#    print(type(twtr_amzn_df['date']))
 
     twtr_goog_df = pd.read_csv(twtr_data_path+'googlehome_tweet_date_text_file.txt', delimiter = '\t',index_col=None, header=None, parse_dates=True)
     twtr_goog_df.columns=['content', 'date']
@@ -292,8 +252,6 @@ def load_twitter_data():
     twtr_goog_df = twtr_goog_df.sort_values(by='date').reset_index(drop=True)
     twtr_goog_df['source'] = "Twitter"
     twtr_goog_df['dataset'] = "Google"
-#    print(twtr_goog_df)
-#    print(type(twtr_goog_df['date']))
 
     return(twtr_amzn_df, twtr_goog_df)
 
@@ -355,7 +313,7 @@ def compute_sentiment_score(search_word, blogstring, scoring_dictionary):
     print(type(blogcorpus))    
     # see how many words are in the corpus 
     # subtracting the number of textdivider words 
-    len(blogcorpus) - blogstring.count('xxxxxxxx')
+    len(blogcorpus) - blogstring.count(' xxxxxxxx ')
 
         
     # list for assigning a score to every word in the blogcorpus
@@ -450,12 +408,12 @@ print(google_dfx)
 
 # Step 7: Combine comments based on quarter end dates
 # Amazon
-amazon_df = amazon_dfx.groupby(['end_date'])['content'].apply(lambda x: 'xxxxxxxx ' .join(x)).reset_index()
+amazon_df = amazon_dfx.groupby(['end_date'])['content'].apply(lambda x: ' xxxxxxxx ' .join(x)).reset_index()
 #res1 = amazon_dfx.groupby(['quarter', 'source', 'dataset'])['content'].apply(lambda x: 'XXXXXX'.join(x)).reset_index()
 print(amazon_df)
 
 # Google
-google_df = google_dfx.groupby(['end_date'])['content'].apply(lambda x: 'xxxxxxxx ' .join(x)).reset_index()
+google_df = google_dfx.groupby(['end_date'])['content'].apply(lambda x: ' xxxxxxxx ' .join(x)).reset_index()
 #res1 = amazon_dfx.groupby(['quarter', 'source', 'dataset'])['content'].apply(lambda x: 'XXXXXX'.join(x)).reset_index()
 print(google_df)
 
@@ -546,25 +504,30 @@ dt = pd.to_datetime(amazon_df['end_date'])
 dtg = pd.to_datetime(google_df['end_date'])
 sta = amazon_df['search_term_score']
 stg = google_df['search_term_score']
-plt.plot(dt, sta, label='Amazon - Search Term')
-plt.plot(dtg, stg, label='Google - Search Term')
+plt.plot(dt, sta, label='Amazon Echo')
+plt.plot(dtg, stg, label='Google Home')
 plt.ylabel('Score')
 plt.xlabel('Quarter End Date')
 plt.title("Amazon Echo & Google Home User Sentiment Score")
 plt.legend(loc='upper center', shadow=True)
 plt.grid(True)
-plt.xticks(rotation = 90)
+plt.xticks(rotation = 30)
 plt.show()
 plt.savefig(sentiment_out_path+ 'amzon_google_sentiment.pdf')
 plt.close()
 
 
-#################################################################################
-## define counts of positive, negative, and total words in text document 
-#def count_words(text, word):    
-#    positive = [w for w in text.split() if w in word]
-#    return(len(positive))
-#
+def save_file(df, fname):
 
+    thefile = open(fname, "w")
+    for i,r in df.iterrows():
+        str_val = r['content1']
+        thefile.write("%s\n" % str_val.encode("ascii"))
+    thefile.close()
 
+amzn_corpus = data_path +"amzn_corpus.txt"
+goog_corpus = data_path +"goog_corpus.txt"
 
+save_file(amazon_df, amzn_corpus)
+
+save_file(google_df, goog_corpus)
